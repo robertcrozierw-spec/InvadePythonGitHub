@@ -1,27 +1,8 @@
 # app.py - super simple invasive species list (starter)
-#import json
-#
-#with open('InvasiveSpeciesapp/species.json','r') as file:
-#    SPECIES = json.load(file)
+import json
 
-SPECIES = [
-    {
-        "name_en": "Mimosa (Silver Wattle)",
-        "name_pt": "Acácia-dealbata (Mimosa)",
-        "scientific": "Acacia dealbata",
-        "districts": ["Lisboa"],
-        "action": "REPORT",
-        "summary": "Fast-growing invasive tree that outcompetes native vegetation."
-    },
-    {
-        "name_en": "Ice plant",
-        "name_pt": "Chorão-das-praias",
-        "scientific": "Carpobrotus edulis",
-        "districts": ["Portugal-wide"],
-        "action": "REMOVE (private land) / REPORT (public land)",
-        "summary": "Spreads quickly and smothers native dune plants."
-    }
-]
+with open('species.json','r') as file:
+    SPECIES = json.load(file)
 
 def species_for_district(district: str):
     results = []
@@ -32,8 +13,8 @@ def species_for_district(district: str):
 
 def main():
     print("Invasive plants near you")
-    district = input("Enter district (default Lisboa): ").strip()
-    #district = "Lisboa"
+    #district = input("Enter district (default Lisboa): ").strip()
+    district = "Lisboa"
     if district == "":
         district = "Lisboa"
 
