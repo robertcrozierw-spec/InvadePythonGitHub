@@ -32,8 +32,8 @@ def species_for_district(district: str):
 
 def main():
     print("Invasive plants near you")
-    #district = input("Enter district (default Lisboa): ").strip()
-    district = "Lisboa"
+    district = input("Enter district (default Lisboa): ").strip()
+    #district = "Lisboa"
     if district == "":
         district = "Lisboa"
 
