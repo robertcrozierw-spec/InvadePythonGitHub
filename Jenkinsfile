@@ -25,7 +25,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    dockerImage = docker.build("bobcorp/invadePython:${env.BUILD_NUMBER}")
+                    dockerImage = docker.build("bobcorp/invadepython:${env.BUILD_NUMBER}")
                 }
             }
         }
