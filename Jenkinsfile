@@ -29,19 +29,16 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
+
+        stage('Push') {
             steps {
-                sh 'docker run --rm bobcorp/invadepython:${env.BUILD_NUMBER} ./run-tests.sh'
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com', 'git') {            
+                    app.push("${env.BUILD_NUMBER}")            
+                    app.push("latest")    
+                    }
+                }
             }
         }
-//        stage('Push') {
-//            steps {
-//                script {
-//                    docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials') {
-//                        dockerImage.push()
-//                    }
-//                }
-//            }
-//        }
     }
 }
