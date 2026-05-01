@@ -12,6 +12,7 @@ def species_for_district(district: str):
     return results
 
 def main():
+    print("TriggerTest!")
     print("Welcome!!!! Are you here to Help?")
     print("Invasive plants near you")
     print("This is the lisboa region")
