@@ -1,7 +1,7 @@
-# app.py - super simple invasive species list
+# nvasive species list
 import json
 
-with open('InvasiveSpeciesapp\species.json','r') as file:
+with open('species.json','r') as file:
     SPECIES = json.load(file)
 
 def species_for_district(district: str):
