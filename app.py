@@ -1,7 +1,7 @@
-# app.py - super simple invasive species list (starter)
+# app.py - super simple invasive species list
 import json
 
-with open('species.json','r') as file:
+with open('InvasiveSpeciesapp\species.json','r') as file:
     SPECIES = json.load(file)
 
 def species_for_district(district: str):
@@ -12,6 +12,7 @@ def species_for_district(district: str):
     return results
 
 def main():
+    print("Welcome!!!!")
     print("Invasive plants near you")
     print("This is the lisboa region")
     #district = input("Enter district (default Lisboa): ").strip()
