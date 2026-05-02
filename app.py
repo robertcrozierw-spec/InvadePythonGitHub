@@ -1,4 +1,4 @@
-# nvasive species list
+# app.py - super simple invasive species list
 import json
 
 with open('species.json','r') as file:
